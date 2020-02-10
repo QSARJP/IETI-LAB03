@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import './Login.css'
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 
 export class Login extends React.Component{
@@ -44,6 +45,7 @@ export class Login extends React.Component{
         return (
             <React.Fragment>
                 <CssBaseline />
+                <ResponsiveDrawer user="name" email = "email.com"  />
                 <main className="layout" onSubmit={this.handleSubmit}>
                     <Paper className="paper">
                         <Avatar className="avatar">
