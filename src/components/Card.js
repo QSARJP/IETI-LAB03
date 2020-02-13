@@ -23,18 +23,18 @@ const useStyles = makeStyles({
 
 export default function OutlinedCard(props) {
   const classes = useStyles();
-
+  
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          {props.task.description}
+          {props.description}
         </Typography>
         <Typography variant="h5" component="h2">
-          {props.task.status} 
+          {props.status} 
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          {props.task.responsible.name} - {new Date(props.task.dueDate).toString()}
+          {props.name} - {new Date(props.dueDate).toString()}
         </Typography>
       </CardContent>
     </Card>

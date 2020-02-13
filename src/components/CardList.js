@@ -5,14 +5,13 @@ import Card from './Card';
 
   
 
-export class CardList extends React.Component {
+export default class CardList extends React.Component {
 
     constructor(props) {
         super(props);
     }
-
     render() {
-        const cardList = this.props.map((task, i) => {
+        const cardList = this.props.task.map((task, i) => {
             return (
                 <Card
                     key={'task_' + i}

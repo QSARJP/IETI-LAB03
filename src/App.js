@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
-import {Login} from './components/Login'
-import {MainView} from './components/MainView'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {Login} from './components/Login';
+import {MainView} from './components/MainView';
 
 class App extends React.Component {
 
@@ -12,10 +12,10 @@ class App extends React.Component {
           <Login handleSignIn={this.handleSignIn}/>
       );
     
-      const MainView = () => (
+      const Main = () => (
           <MainView/>
       );
-      this.state = {loginView: LoginView,mainView: MainView,isLoggedIn:false}
+      this.state = {loginView: LoginView,main: Main,isLoggedIn:false}
       this.handleSignIn=this.handleSignIn.bind(this);
       localStorage.setItem('email', "juan@mail.com");
       localStorage.setItem('name', "juan Ospina");
@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
       const LoginView = this.state.loginView;
-      const MainView = this.state.mainView;
+      const Main = this.state.main;
       const isLoggedIn = this.state.isLoggedIn || (localStorage.getItem("isLoggedIn") == "true" );
       let choose;
       if (!isLoggedIn){
@@ -50,10 +50,10 @@ class App extends React.Component {
           choose = (
               <div>
                   <ul>
-                      <li><Link to="/MainView">MainView</Link></li>
+                      <li><Link to="/Main">Main</Link></li>
                   </ul>
                   <div>
-                       <Route path="/MainView" component={MainView}/>
+                       <Route path="/Main" component={Main}/>
                   </div>
               </div>
 

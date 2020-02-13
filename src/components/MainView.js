@@ -2,6 +2,7 @@ import React from 'react';
 import CardShow from './Card';
 import { task } from './Task';
 import ResponsiveDrawer from './ResponsiveDrawer';
+import CarList from './CardList';
 
 
 
@@ -19,7 +20,8 @@ export class MainView extends React.Component{
         return (
             <div className="MainView" >
                 <ResponsiveDrawer></ResponsiveDrawer>
-                <CardShow task = {task}> </CardShow>
+                <CarList task = {task} ></CarList>
+                
                 
                 
             </div>

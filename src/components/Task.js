@@ -3,7 +3,7 @@
 
 
 
-export const task = (
+export const task = ([
 
 {
     "description": "some description text ",
@@ -23,4 +23,4 @@ export const task = (
     "status": "In Process",
     "dueDate": 156464645646
 }
-);
+]);
