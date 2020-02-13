@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
       const LoginView = this.state.loginView;
-      const TodoAppView = this.state.todoAppView;
+      const MainView = this.state.mainView;
       const isLoggedIn = this.state.isLoggedIn || (localStorage.getItem("isLoggedIn") == "true" );
       let choose;
       if (!isLoggedIn){
