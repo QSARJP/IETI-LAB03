@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -55,8 +56,8 @@ const useStyles = makeStyles(theme => ({
 function ResponsiveDrawer(props) {
   const { container } = props;
   const classes = useStyles();
-  const name = props.user;
-  const email = props.email;
+  const name = localStorage.getItem('name');
+  const email = localStorage.getItem('email');
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -80,14 +81,6 @@ function ResponsiveDrawer(props) {
           {email}
         </Typography>
       </div>
-      <List>
-        {[''].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
       <Divider />
       <List>
         {['Logout'].map((text, index) => (
@@ -115,7 +108,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            {email}
+            {"Task planner"}  
           </Typography>
         </Toolbar>
       </AppBar>

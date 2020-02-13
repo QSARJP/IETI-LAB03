@@ -45,7 +45,7 @@ export class Login extends React.Component{
         return (
             <React.Fragment>
                 <CssBaseline />
-                <ResponsiveDrawer user="name" email = "email.com"  />
+                
                 <main className="layout" onSubmit={this.handleSubmit}>
                     <Paper className="paper">
                         <Avatar className="avatar">
