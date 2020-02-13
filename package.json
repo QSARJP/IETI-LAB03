@@ -2,6 +2,7 @@
   "name": "task-planner-app",
   "version": "0.1.0",
   "engines": {
+    "npm": "6.13.4",
     "node": "12.14.1"
   },
   "private": true,
